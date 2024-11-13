@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "2b2bc2b75df487a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1817e32e9d6b38d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "89e1e256cb243165",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "802e3f3964d676c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce8e61a9cb7195c2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4cf8c065296bee3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2b604601c1134280",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "df734817046b91ea",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3edbc8527efdf75d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ddd3ea13a2b57cc0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "59ac269d9ca9df2a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/pages/notes/salesforce.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for salesforce"
+            }
+          },
+          {
+            "id": "ea706a29062b6d31",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/pages/notes/salesforce.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from salesforce"
+            }
+          },
+          {
+            "id": "3d33d3b541971bcc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2dccc02d423321fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 400.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4cf8c065296bee3c",
+  "lastOpenFiles": [
+    "src/notes/jpmc.md",
+    "src/pages/color.py",
+    "src/notes/colorconverter.ipynb",
+    "src/pages/notes/salesforce.md",
+    "src/notes/snowflake-build.md",
+    "src/notes/salesforce.md",
+    "src/notes/figma.md",
+    "src/notes/log.md",
+    "src/notes",
+    "src/pages/notes/notes/Welcome.md",
+    "src/pages/notes/notes",
+    "src/pages/notes/log.md",
+    "src/pages/notes/snowflake-build.md",
+    "src/pages/notes/snowflake.md",
+    "src/pages/notes/figma.md",
+    "public/data-sandwich.png",
+    "public/snowflake-pipelines.png",
+    "public/sf-appbuilder.png",
+    "public/snowflake-python-data-engineering-flow.png",
+    "Pasted image 20241112171217.png"
+  ]
+}
