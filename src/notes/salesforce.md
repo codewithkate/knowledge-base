@@ -1,7 +1,7 @@
 ---
 title: "No-Code Solutions for Embedding Tableau in Salesforce"
 date: 2024-11-12
-summary: "A quick tutorial to add Tableau Views and Pulse for Desktop and Mobile experiences."
+summary: "A tutorial on Tableau Lightning Web Components for desktop and mobile."
 tags: ["notes", "UI/UX", "system design"]
 ---
 
@@ -30,9 +30,22 @@ Finally, go to the app through the App Launcher. Continue reading  to customize 
 
 ## Connect Tableau Cloud and Salesforce
 
-Note: Connections between Salesforce and Tableau Cloud Dev Sites have not worked in the past. It is recommended that you use active Tableau Cloud and Salesforce instances or Partner site credentials.
+>[!Note]
+>Connections between Salesforce and Tableau Cloud Dev Sites have not worked in the past. It is recommended that you use active Tableau Cloud and Salesforce instances or Partner site credentials.
 
-# CONTINUE HERE: https://help.tableau.com/current/server/en-us/lwc_seamless_auth.htm
+In Setup, search for **Trusted URLs** in the Quick Find search bar. We'll be adding your Tableau Cloud site as a **New Trusted URL**.
+
+Enter an **API Name** and the **URL** for your cloud site. For example:
+
+`https://some-location.online.tableau.com/#/site/your-site-name`
+
+For this introduction, we will set the **CSP Context** to all and save.
+
+Next, enter "Tableau Embedding" in Quick Find so we can setup token authentication for Tableau Pulse LWC.
+
+Check the box to **Turn on SSO authentication with Tableau connected apps**.
+
+You must use the same user identity for Salesforce as Tableau. For instance, you may use the same org email for Salesforce and Tableau, so you select it as your **Tableau User Identity field**. There are custome field options that are not covered here.
 
 ## Personalize App Home Page
 
