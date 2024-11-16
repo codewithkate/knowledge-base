@@ -11,10 +11,28 @@
             "id": "89e1e256cb243165",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "src/notes/salesforce.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "salesforce"
+            }
+          },
+          {
+            "id": "f14a65b51d82ae52",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
         ]
@@ -134,9 +152,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "src/notes/salesforce.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of salesforce"
             }
           }
         ],
@@ -156,27 +176,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4cf8c065296bee3c",
+  "active": "89e1e256cb243165",
   "lastOpenFiles": [
+    "src/scripts/color_representations.py",
+    "src/scripts",
+    "src/New folder",
+    "Untitled.md",
+    "src/notes/salesforce.md",
+    "src/notes/snowflake-build.md",
+    "src/notes/log.md",
+    "src/notes/figma.md",
+    "src/notes/colorconverter.ipynb",
+    "public/snowflake-python-data-engineering-flow.png",
+    "public/snowflake-pipelines.png",
+    "public/sf-tableaudashboard.png",
+    "public/sf-tableau-components.png",
+    "public/sf-pulsemobile.png",
+    "public/sf-phonelayout.png",
+    "public/sf-devicesettings.png",
+    "public/sf-appmanager.png",
+    "public/sf-applauncher.png",
+    "public/sf-appbuilder.png",
+    "src/pages/notes/salesforce.md",
+    "src/pages/notes/log.md",
+    "src/pages/notes",
+    "public/salesforce",
     "src/notes/jpmc.md",
     "src/pages/color.py",
-    "src/notes/colorconverter.ipynb",
-    "src/pages/notes/salesforce.md",
-    "src/notes/snowflake-build.md",
-    "src/notes/salesforce.md",
-    "src/notes/figma.md",
-    "src/notes/log.md",
     "src/notes",
     "src/pages/notes/notes/Welcome.md",
     "src/pages/notes/notes",
-    "src/pages/notes/log.md",
     "src/pages/notes/snowflake-build.md",
     "src/pages/notes/snowflake.md",
-    "src/pages/notes/figma.md",
-    "public/data-sandwich.png",
-    "public/snowflake-pipelines.png",
-    "public/sf-appbuilder.png",
-    "public/snowflake-python-data-engineering-flow.png",
-    "Pasted image 20241112171217.png"
+    "src/pages/notes/figma.md"
   ]
 }
