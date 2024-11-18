@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "004b547272ce8ac9",
+    "type": "split",
+    "children": [
+      {
+        "id": "175f7e1164f96af5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3902e01dc64350c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "oop.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "oop"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0dc27f42cf1bf2c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "361cd95e0092372a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ecb48102f0fcc1a0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2ce5c87ea57ca920",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "50905a25ebe01655",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "d283de892b78f40c",
+    "type": "split",
+    "children": [
+      {
+        "id": "288a050c12647039",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16d9f663032edbbc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "oop.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for oop"
+            }
+          },
+          {
+            "id": "8d1ee9e2d1af551b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "oop.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from oop"
+            }
+          },
+          {
+            "id": "494eb85e18a9c147",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7f7340c86037985f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "oop.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of oop"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "c3902e01dc64350c",
+  "lastOpenFiles": [
+    "bio.md",
+    "oop.md",
+    "oop"
+  ]
+}

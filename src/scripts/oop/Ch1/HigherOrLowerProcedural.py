@@ -1,96 +1,90 @@
-# Setup 
+# Title: HigherOrLower 
 
 import random
 
-deck = {
-    'rank': ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'], 
-    'suit': ['Diamonds', 'Hearts', 'Clubs', 'Spades'], 
-}
+# Card constants
+SUIT_TUPLE = ('Diamonds', 'Hearts', 'Clubs', 'Spades')
+RANK_TUPLE = ('Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King')
 
-message = """
+NCARDS = 8
+
+# Pass in a deck and this function returns a random card from the deck
+def get_card(deck_list_in):
+    this_card = deck_list_in.pop() # pop a card off the top of the deck (the end of the list)
+    return this_card
+
+# Pass in a deck and this function returns a shuffled copy of the deck
+def shuffle(deck_list_in):
+    deck_list_out = deck_list_in.copy() # make a copy of the deck
+    random.shuffle(deck_list_out) # reorder the list
+    return deck_list_out
+
+# Main code
+print("""
 Welcome to Higher or Lower!
-The card game where you guess what's next.
-\nPick a card and place your bet if the next draw will be higher or lower in value.
+Pick a card and place your bet on if the next draw will be higher or lower in value.
 \nGet it right: +20pts
 Get it wrong: -15pts
-"""
-print(message)
-print('-'*15,'\n')
+\nYou have 50 points to start.
+""")
+print('-'*15)
 
-# Instructions
-
-def random_rank(deck:list):
-    return deck['rank'][random.randint(0,12)]
-
-def random_suit(deck:list):
-    return deck['suit'][random.randint(0,3)]
-
-def get_value(rank) -> int:
-    if rank == 'Ace': return 1
-    elif rank == 'Jack': return 11
-    elif rank == 'Queen': return 12
-    elif rank == 'King': return 13    
-    else: return rank
-
-def draw(deck):
-    rank = random_rank(deck)
-    suit = random_suit(deck)
-    value = get_value(rank)
-    return [rank, suit, value]
-
-def predict_card() -> int:
-    while True:  # Loop until valid input is given
-            guess = input("Will the next card be higher(1) or lower(0)? ")  # Ensure input is converted to an integer
-            
-            if guess in ['1','0']:
-                break # Exit loop
-            else: # Loop again
-                print("Enter 1 or 0.")
-    return int(guess)
-
-def compare_cards(v1, v2):
-    if v1 < v2: return 1 # higher
-    elif v1 >= v2: return 0 # lower
-
-
-# Gameplay
+# Step 1
+starting_deck_list = []
+for suit in SUIT_TUPLE:
+    for value, rank in enumerate(RANK_TUPLE):
+        card_dict = {'rank':rank, 'suit':suit, 'value':value}
+        starting_deck_list.append(card_dict)
 
 score = 50
 
-while True: # Allow user to play again
-    for i in range(1,8): # Play 7 rounds per game
-        print('\nRound', i)
+while True: # play multiple games
+    print()
+    game_deck_list = shuffle(starting_deck_list)
+    # Step 2
+    current_card_dict = get_card(game_deck_list)
+    current_card_suit = current_card_dict['suit']
+    current_card_rank = current_card_dict['rank']
+    current_card_value = current_card_dict['value']
+    print(f'Starting card is: {current_card_rank} of {current_card_suit}')
+    print()
 
-        # Draw rank, suit, and value
-        r, s, v = draw(deck)
-        print(f'Current Card: {r} of {s}')
+    # Step 3
+    for n in range(1, NCARDS): # play one game of this many cards
+        print('Round', n)
+        guess = input('Will the next card be higher or lower? (enter h or l): ')
+        guess = guess.casefold() # force lowercase
+    
+        # Step 4
+        next_card_dict = get_card(game_deck_list)
+        next_card_suit = next_card_dict['suit']
+        next_card_rank = next_card_dict['rank']
+        next_card_value = next_card_dict['value']
+        print(f'Next card is: {next_card_rank} of {next_card_suit}')
 
-        # Guess the next card
-        guess = predict_card()
-        r2, s2, v2 = draw(deck)
+        # Step 5
+        if next_card_value > current_card_value:
+            answer = 'h'
+        elif next_card_value < current_card_value:
+            answer = 'l'
         
-        # Check your answer
-        answer = compare_cards(v, v2)
-        if answer == guess:
-            print("Correct!")
+        if guess == answer:
             score+=20
+            print('Correct!')
         else:
-            print("Wrong!")
-            score-=15
+            score=-15
+            print("Sorry, you're wrong")
 
-        # Next round out of 7
-        r, s, v = r2, s2, v2
-        if i != 7:    
+        if n != NCARDS-1:
             print('\nYour Score:', score)
-        else: 
+        else:
             print('\nFinal Score:', score)
+        print()
+
     
     # Prompt user to play again
-    reset = input("Play again (y/n)? ").strip().lower()
-
-    if 'n' in reset:
+    go_again = input('To play again, press ENTER, or "q" to quit: ')
+    if 'q' in go_again:
         break # exit loop
-    else:
-        score = 0
 
 print('\nThanks for playing!\n')
