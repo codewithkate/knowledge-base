@@ -18,50 +18,47 @@ There are two kinds of Salesforce apps: Classic and Lightning. Using apps in Lig
 
 ## Create a New Lightning App 
 
-Go to your Salesforce Site. Click the gear icon (⚙️) in the top right header to navigate to **Setup**. Use Quick Find to search for **App Manager** under Apps.
+1. Go to your Salesforce Site. Click the gear icon (⚙️) in the top right header to navigate to **Setup**. 
+2. Use Quick Find to search for **App Manager** under Apps.
 
 ![[sf-appmanager.png]]
 
-Create a New Lightning App. Give it a descriptive name for the team or department and add any custom branding. 
-
-Keep default app options and utility items.  Unless you know the items you want to include as tabs in your app, then skip adding navigation items. Choose the user profiles that can access the app.
-
-Finally, go to the app through the App Launcher. Continue reading  to customize this new app with navigation pages.
+3. Create a New Lightning App. 
+4. Enter a descriptive name for the team or department and add any custom branding. 
+5. Keep default app options, utility, and navigation items, unless you know the items you want to include as tabs in your app.
+7. Choose the user profiles that can access the app.
+8. Finally, go to the app through the App Launcher. Continue reading for how to add Tableau components to this app.
 
 ## Connect Tableau Cloud and Salesforce
 
+Tableau has detailed step-by-step instructions to [configure Tableau Lightning Web Components and Single Sign-On (SSO) with token authentication](https://help.tableau.com/current/server/en-us/lwc_seamless_auth.htm).
+
 >[!Note]
 >Connections between Salesforce and Tableau Cloud Dev Sites have not worked in the past. It is recommended that you use active Tableau Cloud and Salesforce instances or Partner site credentials.
-
-In Setup, search for **Trusted URLs** in the Quick Find search bar. We'll be adding your Tableau Cloud site as a **New Trusted URL**.
-
-Enter an **API Name** and the **URL** for your cloud site. For example:
-
-`https://some-location.online.tableau.com/#/site/your-site-name`
-
-For this introduction, we will set the **CSP Context** to all and save.
-
-Next, enter "Tableau Embedding" in Quick Find so we can setup token authentication for Tableau Pulse LWC.
-
-Check the box to **Turn on SSO authentication with Tableau connected apps**.
-
-You must use the same user identity for Salesforce as Tableau. For instance, you may use the same org email for Salesforce and Tableau, so you select it as your **Tableau User Identity field**. There are custome field options that are not covered here.
 
 ## Personalize App Home Page
 
 We can create a new view to add to our home page. For this example, we will be embedding a Tableau Dashboard.
 
-Go to Setup and search for **Lightning App Builder** from Quick Find. Cick New to create a Home Page. 
+1. Go to Setup and search for **Lightning App Builder** from Quick Find. 
+2. Click New to create a Home Page. 
 
 ![[sf-appbuilder.png]] 
 
-Search for Tableau in the Components Panel. If you want to embed a Tableau Dashboard or Worksheet then use **Tableau View**. We will be using **Tableau Pulse** to create a Mobile App in the next section.
+3. Search for Tableau in the Components Panel.
+	- **Tableau View**: embed a tableau dashboard or worksheet. (**choose this one**) 
+	- **Tableau Pulse**: web component for pulse metrics.
+4. Click and drag the **Tableau View Component** onto the main canvas. 
+5. Copy/Paste the **URL** from Tableau cloud to your Tableau dashboard and the **Site ID** for your organization's Tableau Site.
+6. Save the page and go to **Activation**.
+7. Assign the page as the **home page** for select apps.
 
-Click and drag the Tableau View Component onto the main canvas. Enter a URL for the Tableau view and the Site ID for your organization's Tableau Site. Save the page.
+If the activation was successful, then go back to your app. We will need to add the home page to your navigation tabs.
 
-Then, go to Activation and assign it as the home page for select apps.
+1. Click the pencil (✏️) icon to the right of the App name. 
+2. Add more items and search for Home.
 
-If the activation was successful, then go back to your app. Click the pencil (✏️) icon to the right of the App name. Go to add more items and search for Home to add it to the navigation menu as a tab. You may need to repeat this step for other Desktop pages you create.
+You should see something like this:
 
 ![[sf-tableaudashboard.png]]
 
@@ -71,17 +68,16 @@ Continue reading to learn how to make mobile-friendly pages.
 
 You can't access Desktop views from the Mobile App. You must create a phone layout. 
 
-Within Lightning App Builder, create a new page. Name it Tableau Pulse with a One Region layout.
+1. Within Lightning App Builder, create a new page. 
+2. Name it Tableau Pulse with a One Region layout.
 
-You should see a Phone layout selected above the canvas.
+You should see a Phone layout selected above the canvas:
 
 ![[sf-phonelayout.png]]
 
-Search for Tableau Pulse component and drag it onto the canvas.
-
-Open Tableau Pulse and paste the full URL (including your site name).
-
-Open Connected Apps in Tableau Cloud Settings. Find the Salesforce connection and Copy Site ID to paste into the App Setup.
+3. Search for Tableau Pulse component and drag it onto the canvas.
+4. Open Tableau Pulse and paste the full URL (including your site name).
+5. Open Connected Apps in Tableau Cloud Settings. Find the Salesforce connection (created earlier) and Copy Site ID to paste into the App Setup.
 
 Now, you can move onto adjusting the Activation settings.
 
@@ -97,7 +93,7 @@ After downloading the Salesforce App, go to your device settings. You will need 
 
 ![[sf-devicesettings.png]]
 
-Open the Salesforce App and go to the App Launcher on the Menu page. 
+Open the Salesforce App and go to the **App Launcher** on the Menu page. 
 
 Find **Mobile Only** and you should be able to view your Tableau Pulse app from the navigation menu. 
 
